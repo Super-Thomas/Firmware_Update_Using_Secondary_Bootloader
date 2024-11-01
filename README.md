@@ -42,6 +42,6 @@ Enable Data Flash, Base Address: 0x1F000, Data Flash Size: 4 KB</br>
 ![image](https://github.com/user-attachments/assets/852ffa44-bbe8-493f-9943-b93c2f46b75c)
 
 ### Flow chart of Firmware
-![image](https://github.com/user-attachments/assets/8b53881f-6a37-42e4-8c03-2eb13a878a07)
+![image](https://github.com/user-attachments/assets/ccf61618-e967-42b8-bd63-998ab23cda18)
 
 ## How to test
