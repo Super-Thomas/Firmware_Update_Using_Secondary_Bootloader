@@ -30,6 +30,10 @@ You can run the ISP Program via UART1.</br>
 ![image](https://github.com/user-attachments/assets/69975453-82b9-48be-af00-620715d184f9)</br>
 The firmware runs on execution area(APROM Part-1).</br>
 The new firmware data will be write to update area(APROM Part-2) by firmware with ISP function.</br>
+Defined in Bootloader/Sources/main.c and Firmware/Sources/ISP_USER.h:
+```c
+#define APROM_UFW_ADDRESS						(0x0000F800)
+```
 The Flag area (Data Flash) have CRC-16 data for verifying firmware errors and flag for check the success about write firmware data.</br>
 The bootloader runs on boot-loader area(LDROM).</br>
 
