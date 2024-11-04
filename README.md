@@ -45,3 +45,22 @@ Enable Data Flash, Base Address: 0x1F000, Data Flash Size: 4 KB</br>
 ![image](https://github.com/user-attachments/assets/ccf61618-e967-42b8-bd63-998ab23cda18)
 
 ## How to test
+1. Please program to NuTiny-SDK-M0519V board with Nuvoton ICP Tool like below:
+   - Binary/Bootloader.bin to LDROM
+   - Binary/Firmware_Ver_A.bin to APROM
+   - Config 0: 0xFFFFFF7E, Config 1: 0x0001F000 (Boot options: LDROM, Enable data flash, Base Address: 0x1F000, Data flash size: 4 KB)
+2. Open the UART0(USB VCOM) port using Terminal(like as Tera-term).</br>
+(Port settings: Baudrate 115200, Data 8-bit, Parity none, Stop bit 1, Flow control none)</br>
+And then press reset button of NuTiny-SDK-M0519V board. You can check debug message from NuTiny-SDK-M0519V board.</br>
+![image](https://github.com/user-attachments/assets/737f8b11-057e-4796-ad90-aecddcb569b4)
+3. Please connect between NuTiny-SDK-M0519V board and ISP Tool using UART1.</br>
+![image](https://github.com/user-attachments/assets/954b2288-0b2d-43e4-acf7-59444516d0bb)
+4. Load binary of firmware version B to APROM of load file section. And then enable APROM of programming section. Then press start button.</br>
+![image](https://github.com/user-attachments/assets/4a58c088-9fe0-42ea-8271-c3c484096d75)
+5. Please press reset button of NuTiny-SDK-M0519V board when completed program. Then you can see the bootloader copying the firmware in debug message. After then you can see that firmware version B is running.</br>
+![image](https://github.com/user-attachments/assets/a30ffcc9-4287-42f8-9ea1-1a9e7892a441)
+
+## Thanks to
+[AN12327 - Firmware Update Using Secondary Bootloader](https://www.nxp.com/docs/en/application-note/AN12327.pdf)</br>
+[ISPTool](https://github.com/OpenNuvoton/ISPTool)</br>
+[M0519 BSP](https://github.com/OpenNuvoton/M0519BSP)
